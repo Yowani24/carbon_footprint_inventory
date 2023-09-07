@@ -487,7 +487,7 @@ export default function Inventory() {
           flexDirection: "row",
           justifyContent: "space-between",
           overflow: "hidden",
-          height: "70%",
+          // height: "70%",
           marginTop: 5,
           padding: 3,
         }}
