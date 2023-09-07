@@ -361,6 +361,10 @@ export default function Inventory() {
   }));
 
   const ContentBox = styled("div")(({ theme }) => ({
+    "@media (max-width: 1300px)": {
+      ".question_image_box": { marginTop: -80, width: "40%" },
+      ".radioGroupForm": { marginTop: "8%" },
+    },
     "@media (max-width: 1280px)": {
       ".question_image_box": { width: "40%", minHeight: 60, marginTop: -40 },
     },
