@@ -339,6 +339,13 @@ export default function Inventory() {
   }, [showResult]);
 
   const MainContainer = styled("div")(({ theme }) => ({
+    "@media (max-width: 1280px)": {
+      ".button_controls": { marginTop: 5 },
+    },
+
+    [theme.breakpoints.down("lg")]: {
+      height: "auto",
+    },
     [theme.breakpoints.down("md")]: {
       padding: showResult ? "0 20px" : "",
     },
@@ -354,6 +361,12 @@ export default function Inventory() {
   }));
 
   const ContentBox = styled("div")(({ theme }) => ({
+    "@media (max-width: 1280px)": {
+      ".question_image_box": { width: "40%", minHeight: 60, marginTop: -40 },
+    },
+    [theme.breakpoints.down("lg")]: {
+      width: "65%",
+    },
     [theme.breakpoints.down("md")]: {
       width: "100%",
       padding: showResult ? 4 : "",
@@ -376,6 +389,9 @@ export default function Inventory() {
   }));
 
   const ResultBox = styled("div")(({ theme }) => ({
+    [theme.breakpoints.down("lg")]: {
+      display: showResult ? "flex" : "none",
+    },
     [theme.breakpoints.down("md")]: {
       width: "100%",
       display: showResult ? "flex" : "none",
@@ -669,6 +685,7 @@ export default function Inventory() {
       </ContentBox>
       <MobileStepper
         sx={{ background: "none", marginTop: 4 }}
+        className="button_controls"
         variant=""
         steps={3}
         position="static"
